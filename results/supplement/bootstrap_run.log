@@ -1,0 +1,42 @@
+- The project is out-of-sync -- use `renv::status()` for details.
+[15s] loaded 377518 rows
+[CSJ Monologue] N=81686 spk=31 point=1.519 -> bootstrap B=1000
+   CSJ Monologue 100/1000 (17s)
+   CSJ Monologue 200/1000 (35s)
+   CSJ Monologue 300/1000 (52s)
+   CSJ Monologue 400/1000 (70s)
+   CSJ Monologue 500/1000 (88s)
+   CSJ Monologue 600/1000 (106s)
+   CSJ Monologue 700/1000 (124s)
+   CSJ Monologue 800/1000 (141s)
+   CSJ Monologue 900/1000 (159s)
+   CSJ Monologue 1000/1000 (177s)
+   -> 95% CI [1.234, 1.734] (n_boot=1000)
+   LOSO range [1.452, 1.560]; point 1.519
+[Buckeye] N=274239 spk=40 point=1.484 -> bootstrap B=1000
+   Buckeye 100/1000 (66s)
+   Buckeye 200/1000 (133s)
+   Buckeye 300/1000 (199s)
+   Buckeye 400/1000 (266s)
+   Buckeye 500/1000 (331s)
+   Buckeye 600/1000 (397s)
+   Buckeye 700/1000 (463s)
+   Buckeye 800/1000 (528s)
+   Buckeye 900/1000 (593s)
+   Buckeye 1000/1000 (657s)
+   -> 95% CI [1.328, 1.627] (n_boot=1000)
+   LOSO range [1.448, 1.507]; point 1.484
+[CSJ Dialogue] N=21557 spk=18 point=1.377 -> bootstrap B=1000
+   CSJ Dialogue 100/1000 (5s)
+   CSJ Dialogue 200/1000 (10s)
+   CSJ Dialogue 300/1000 (15s)
+   CSJ Dialogue 400/1000 (19s)
+   CSJ Dialogue 500/1000 (25s)
+   CSJ Dialogue 600/1000 (30s)
+   CSJ Dialogue 700/1000 (34s)
+   CSJ Dialogue 800/1000 (39s)
+   CSJ Dialogue 900/1000 (44s)
+   CSJ Dialogue 1000/1000 (49s)
+   -> 95% CI [1.109, 1.667] (n_boot=1000)
+   LOSO range [1.291, 1.426]; point 1.377
+[928s] DONE

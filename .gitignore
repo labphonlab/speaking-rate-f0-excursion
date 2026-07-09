@@ -1,0 +1,43 @@
+# generated data — never published (licensed corpora + derived master table)
+data/
+
+# environments / caches
+.venv/
+renv/library/
+__pycache__/
+*.pyc
+.Rhistory
+.DS_Store
+
+# agent + local (internal working notes — not for publication)
+.claude/
+CLAUDE.md
+
+# cover letter: private editor correspondence (contains submission ID + personal
+# contact details) — kept local for submission, NOT published. Remove these two
+# lines only if you consciously choose to make the cover letter public.
+manuscript/cover_letter.docx
+docs/manuscript_final/Cover_letter_v2.md
+config/config.local.yaml
+*.zip
+
+# results/: only the supplementary tables + reports are published for
+# transparency (results/supplement/). Everything below is excluded:
+#   - figures are snapshotted under manuscript/figures/ instead
+#   - manuscript_pack/ is pipeline scratch, superseded by manuscript/
+#   - *.rds fitted-model objects are large and may embed token-level data
+#   - peak_delay_tokens.csv is a token-level dump
+#   - run_all.log / diagnostics.json contain absolute local paths
+results/figures/
+results/manuscript_pack/
+results/supplement/*.rds
+results/supplement/peak_delay_tokens.csv
+results/supplement/run_all.log
+results/supplement/diagnostics.json
+docs/_drafts_with_notes/
+
+# MS Office / LibreOffice lock & temp files
+~$*
+
+# short-vowel-only archive: local reproducibility backup, contains absolute paths; not for public repo
+results/supplement_shortvowel_archive/

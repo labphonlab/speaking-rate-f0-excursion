@@ -1,0 +1,10 @@
+"Dataset","DV","N","n_speakers","eff_range_full_st","eff_range_5_95_st","slope_per_100ms_st","fit_at_p5_st","fit_at_p95_st","sign_p5_minus_p95_st","direction_label","exceeds_JND_0.5","exceeds_JND_1.0","exceeds_JND_1.5"
+"CSJ Monologue","max",93156,31,2.594,0.681,-0.586,0.342,0.63,-0.288,"shrinks_when_fast",TRUE,FALSE,FALSE
+"CSJ Monologue","range",93156,31,2.9,2.162,0.4523,-2.054,0.139,-2.193,"shrinks_when_fast",TRUE,TRUE,TRUE
+"CSJ Monologue","landmark",93151,31,2.234,1.757,0.2502,-1.539,0.244,-1.783,"shrinks_when_fast",TRUE,TRUE,TRUE
+"Buckeye","max",274273,40,0.672,0.345,0.1206,-0.368,-0.086,-0.283,"shrinks_when_fast",FALSE,FALSE,FALSE
+"Buckeye","range",274271,40,2.984,1.976,0.5575,-1.883,0.126,-2.009,"shrinks_when_fast",TRUE,TRUE,TRUE
+"Buckeye","landmark",274239,40,2.149,1.484,0.3845,-1.388,0.122,-1.51,"shrinks_when_fast",TRUE,TRUE,FALSE
+"CSJ Dialogue","max",24734,18,0.609,0.596,-0.0816,-0.195,0.049,-0.244,"shrinks_when_fast",TRUE,FALSE,FALSE
+"CSJ Dialogue","range",24734,18,2.437,1.901,0.4397,-1.65,0.278,-1.929,"shrinks_when_fast",TRUE,TRUE,TRUE
+"CSJ Dialogue","landmark",24732,18,1.672,1.441,0.2374,-1.186,0.278,-1.464,"shrinks_when_fast",TRUE,TRUE,FALSE

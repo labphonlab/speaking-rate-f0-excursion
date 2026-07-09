@@ -1,0 +1,4 @@
+distribution,n,mean,median,p25,p75
+long_observed_full,23289,2.6506,2.0876,1.2116,3.4596
+long_thinned_pseudo,2295400,0.688,0.4537,0.2165,0.8854
+fast_observed,15885,1.0369,0.8001,0.4089,1.4216

@@ -1,0 +1,4 @@
+"Dataset","N","pearson_r","spearman_r","num_valid_min","num_valid_med","num_valid_max","dur_eff_base_st","dur_eff_ctrl_numvalid_st","shrink_pct","concurvity_dur_numvalid","band_N","band_dur_spread_ms","band_within_dur_eff_st","band_dur_p"
+"Buckeye",274271,0.886,0.871,3,7,50,1.976,1.008,49,0.966,91493,69,0.622,0
+"CSJ Dialogue",24734,0.916,0.888,3,7,48,1.901,0.389,79.5,0.967,9578,49,0.334,0
+"CSJ Monologue",93156,0.918,0.913,3,7,50,2.162,1.164,46.2,0.982,37845,43,0.464,0

@@ -1,0 +1,3 @@
+"Language","Register","N","n_speakers","eff_range_5_95_st","slope_per_100ms_st","exceeds_JND_1.0","exceeds_JND_1.5","difference_smooth_p","language_level_p"
+"Japanese","CSJ Dialogue",24732,18,1.441,0.2374,TRUE,FALSE,0.0107,0.312
+"English","Buckeye conversational",274239,40,1.484,0.3845,TRUE,FALSE,0.0107,0.312

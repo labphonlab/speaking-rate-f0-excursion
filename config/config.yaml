@@ -1,0 +1,82 @@
+paths:
+  # Raw corpora are NOT redistributed (licensed; see README "Data"). Place or
+  # symlink each corpus under data/raw/ (paths below are relative to the repo
+  # root, which scripts/run_all.sh cd's into). e.g.
+  #   ln -s /path/to/BuckeyeCorpus data/raw/BuckeyeCorpus
+  #   ln -s /path/to/csj           data/raw/csj
+  #   ln -s /path/to/csj_dialogue  data/raw/csj_d
+  raw:
+    buckeye:  "data/raw/BuckeyeCorpus/"
+    csj_mono: "data/raw/csj/"
+    csj_dial: "data/raw/csj_d/"
+    # cejc:   "data/raw/cejc/"
+  interim:    "data/02_interim/"
+  processed:  "data/03_processed/"
+  master_csv: "data/03_processed/rate_f0_master.csv"
+  supplement: "results/supplement/"
+  figures:    "results/figures/"
+buckeye_exclude_subdirs: ["buckeye_data"]
+# CSJ Dialogue: diagnose_data のチャンネル実測（seg注釈区間で片ch RMS が約10倍優勢、
+# median|d|≈0.9）から、seg 層は1話者のみを注釈と判定。よって L/R を2話者扱いせず、
+# ファイル毎に注釈が乗る優勢チャンネルを自動選択し、その1話者のみ採用（=セッション単位）。
+csj_dial:
+  speaker_unit: "session"          # "session"(18話者,推奨) | "channel"(36話者,旧仕様/非推奨)
+  channel_select: "auto_dominant"  # 注釈区間のRMSが大きいチャンネルでF0測定
+pitch:
+  floor: 75
+  ceiling: 600
+  time_step: 0.01
+  # NOTE: config は speaker_specific_range=true だが、原稿想定N(固定75-600)の再現と
+  # 二段抽出のリスク回避のため build_dataset は現状フルレンジ固定で抽出する。
+  # 話者別レンジ二段抽出が必要なら別途切替（実装済みフラグを false で明示中）。
+  speaker_specific_range: false
+# intensity(dB) 抽出（intensity交絡チェック 11_intensity_check.R 用）。母音区間・
+# フレーム定義は F0 と同一。minimum_pitch は Praat の解析窓を決める（=pitch.floor に合わせる）。
+intensity:
+  minimum_pitch: 75
+  time_step: 0.01
+vowels:
+  jp: ["a","i","u","e","o","ah","ih","uh","eh","oh"]
+  en: ["aa","ae","ah","ao","aw","ay","eh","er","ey","ih","iy","ow","oy","uh","uw"]
+filtering:
+  dur_min: 0.03
+  dur_max: 0.50
+  min_valid_frames: 3
+  jump_method: "hz"
+  jump_hz_threshold: 50
+  jump_ratio_high: 1.8
+  jump_ratio_low: 0.55
+pause_labels: ["sp","pau","sil","noise","garbage","<sil>","<pz>","<cl>","(p","<noise>","<vocnoise>","{b_trans}","{e_trans}"]
+dv:
+  extract: ["f0_max","f0_min","f0_mean","f0_range"]
+  primary: "f0_max"
+# 固定ランドマーク excursion（フレーム数アーティファクト対策; 09_artifact_check 参照）。
+# raw max-min は voiced フレーム全数に依存し、短母音でフレームが少ない→下方バイアスで
+# range が小さく見える(=速度効果の大半がサンプリング産物)。対策として各母音の時間比率
+# 固定点で F0 を線形補間(端は最近傍クランプ)し、常に k 点だけで excursion を測る。
+# 点数が duration 非依存なので原理的にアーティファクト非感受性。
+landmark:
+  props: [0.1, 0.3, 0.5, 0.7, 0.9]
+# アクセント核サブ分析（測定妥当性: 「各母音にターゲット」批判への回答）。
+# CSJ の X-JToBI tone 層で accentual fall = 'A'(/'Ax') が付く母音を「トーン指定あり=核」と判定。
+# build_dataset は各母音区間について、A 点が区間内なら AccentDist=0、外なら最近傍 A への
+# 時間ギャップ(秒)を記録。厳密核=AccentDist==0、近傍核=AccentDist<=near_tol_s。
+# 06_accent_nucleus.R が閾値感度も含めて rate→F0range を核限定で再検証する。
+accent:
+  tone_tier: "tone"
+  nucleus_marks: ["A", "Ax"]
+  near_tol_s: 0.10
+# F0 の知覚閾（半音）。effect size をこの帯と比較して「知覚的に意味があるか」を判定。
+# static  : 静的F0の弁別閾（定常ピッチ間の水準差の識別, ~0.5-1 st）。
+# movement: ピッチ「運動」の知覚的関連性閾。't Hart(1981) は intonation では
+#           ~1.5 st 未満のピッチ変化はほぼ無関係とする(グリッサンド閾)。本研究の DV は
+#           excursion(運動)なので、より厳しいこの帯でも併記して判定する。
+# 全スクリプトは _utils.R 経由でこれを読む(単一ソース)。図の帯は static を使用。
+jnd:
+  static: [0.5, 1.0]
+  movement: [1.0, 1.5]
+compute:
+  n_jobs: 4
+  # Homebrew の R ビルドは OpenMP 非対応（mgcv が single-threaded 警告）。
+  # bam(discrete=TRUE) の nthreads>1 は no-op なので 1 に固定。詳細は A.3 実測。
+  r_nthreads: 1

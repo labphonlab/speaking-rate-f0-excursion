@@ -1,0 +1,3 @@
+"Dataset","N_vowels","pct_A_in_current","pct_A_in_next_vowel","pct_neither","median_dur_all","median_dur_next_vowel_peak","A3_n","A3_current_exc_st","A3_concat_exc_st","A3_undercapture_st","A4_eff_all_st","A4_eff_excl_st","A4_eff_only_st"
+"CSJ Monologue",93151,15.5,11.5,73,0.073,0.068,10689,0.891,2.364,1.258,1.757,1.787,1.107
+"CSJ Dialogue",24732,16.5,10.7,72.7,0.074,0.067,2648,0.914,2.204,1.008,1.441,1.436,1.104

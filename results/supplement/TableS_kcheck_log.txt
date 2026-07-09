@@ -1,0 +1,12 @@
+### study1 full ###
+                              k'        edf  k-index p-value
+s(Duration):LanguageEnglish   19  10.468152 1.008519  0.7200
+s(Duration):LanguageJapanese  19   9.055567 1.008519  0.7425
+s(Duration,Speaker)          355 289.934854 1.008519  0.7225
+s(Vowel)                      21  19.047863       NA      NA
+
+### study2 full ###
+                    k'       edf k-index p-value
+s(Duration)         19  6.841985  1.0004  0.5575
+s(Duration,Speaker) 90 60.569395  1.0004  0.5325
+s(Vowel)            10  8.757222      NA      NA

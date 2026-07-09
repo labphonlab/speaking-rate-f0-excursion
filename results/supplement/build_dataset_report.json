@@ -1,0 +1,130 @@
+{
+  "timestamp": "2026-07-05T07:44:51",
+  "vowel_tokens_extracted": 498300,
+  "buckeye_nasalized_excluded": 3361,
+  "raw_tokens": 498300,
+  "final_tokens": 392163,
+  "n_failures": 0,
+  "by_dataset_final": [
+    {
+      "Dataset": "Buckeye",
+      "n_tokens_final": 274273,
+      "n_speakers": 40
+    },
+    {
+      "Dataset": "CSJ Dialogue",
+      "n_tokens_final": 24734,
+      "n_speakers": 18
+    },
+    {
+      "Dataset": "CSJ Monologue",
+      "n_tokens_final": 93156,
+      "n_speakers": 31
+    }
+  ],
+  "csj_dial_channel_pick": [
+    {
+      "session": "D01F0002",
+      "channel": "L",
+      "dominance": 0.524
+    },
+    {
+      "session": "D01F0023",
+      "channel": "R",
+      "dominance": 0.884
+    },
+    {
+      "session": "D01F0030",
+      "channel": "R",
+      "dominance": 0.931
+    },
+    {
+      "session": "D01M0009",
+      "channel": "R",
+      "dominance": 0.976
+    },
+    {
+      "session": "D01M0019",
+      "channel": "R",
+      "dominance": 0.578
+    },
+    {
+      "session": "D01M0047",
+      "channel": "R",
+      "dominance": 0.842
+    },
+    {
+      "session": "D02F0015",
+      "channel": "R",
+      "dominance": 0.713
+    },
+    {
+      "session": "D02F0025",
+      "channel": "R",
+      "dominance": 0.718
+    },
+    {
+      "session": "D02F0031",
+      "channel": "R",
+      "dominance": 0.744
+    },
+    {
+      "session": "D02M0028",
+      "channel": "L",
+      "dominance": 0.539
+    },
+    {
+      "session": "D02M0039",
+      "channel": "R",
+      "dominance": 0.869
+    },
+    {
+      "session": "D02M0051",
+      "channel": "L",
+      "dominance": 0.567
+    },
+    {
+      "session": "D04F0022",
+      "channel": "R",
+      "dominance": 0.921
+    },
+    {
+      "session": "D04F0044",
+      "channel": "R",
+      "dominance": 0.949
+    },
+    {
+      "session": "D04F0050",
+      "channel": "R",
+      "dominance": 0.91
+    },
+    {
+      "session": "D04M0010",
+      "channel": "R",
+      "dominance": 0.986
+    },
+    {
+      "session": "D04M0052",
+      "channel": "R",
+      "dominance": 0.993
+    },
+    {
+      "session": "D04M0056",
+      "channel": "R",
+      "dominance": 0.843
+    }
+  ],
+  "manuscript_targets": {
+    "CSJ Monologue": 82494,
+    "Buckeye": 259019,
+    "CSJ Dialogue": 25874
+  },
+  "config": {
+    "jump_method": "hz",
+    "speaker_specific_range": false,
+    "csj_dial": {
+      "speaker_unit": "session",
+      "channel_select": "auto_dominant"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+"Corpus","DV","N","n_speakers","within_eff_5_95_st","within_slope_per_100ms","within_sign_p5_minus_p95","within_direction","within_exceeds_JND_1.0","between_slope_per_100ms","between_p"
+"CSJ Monologue","landmark_exc",93151,31,1.729,0.29,-1.746,"down_when_fast",TRUE,0.0492,0.973
+"CSJ Monologue","landmark_max",93156,31,0.583,-0.6509,-0.141,"down_when_fast",FALSE,-10.8523,0.376
+"CSJ Monologue","landmark_min",93156,31,1.6,-0.9367,1.621,"up_when_fast",FALSE,-10.8892,0.378
+"Buckeye","landmark_exc",274239,40,1.437,0.423,-1.462,"down_when_fast",TRUE,0.8385,0.28
+"Buckeye","landmark_max",274273,40,0.207,0.002,-0.002,"flat",FALSE,-7.8256,0.251
+"Buckeye","landmark_min",274273,40,1.418,-0.4154,1.445,"up_when_fast",FALSE,-8.5322,0.209
+"CSJ Dialogue","landmark_exc",24732,18,1.378,0.3727,-1.412,"down_when_fast",TRUE,-0.3856,0.587
+"CSJ Dialogue","landmark_max",24734,18,0.456,-0.226,-0.033,"down_when_fast",FALSE,4.3324,0.528
+"CSJ Dialogue","landmark_min",24734,18,1.442,-0.6166,1.492,"up_when_fast",FALSE,4.6052,0.507

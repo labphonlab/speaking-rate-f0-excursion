@@ -1,0 +1,13 @@
+"Corpus","threshold_s","label","N","n_speakers","eff_range_5_95_st","exceeds_JND_1.0","exceeds_JND_1.5"
+"CSJ Monologue",0,"strict(in-vowel)",14456,31,2.068,TRUE,TRUE
+"CSJ Monologue",0.03,"<=0.03s",17813,31,2.193,TRUE,TRUE
+"CSJ Monologue",0.05,"<=0.05s",20282,31,2.242,TRUE,TRUE
+"CSJ Monologue",0.1,"<=0.10s",29885,31,2.282,TRUE,TRUE
+"CSJ Monologue",0.15,"<=0.15s",39620,31,2.085,TRUE,TRUE
+"CSJ Monologue",NA,"all-vowels",93151,31,1.757,TRUE,TRUE
+"CSJ Dialogue",0,"strict(in-vowel)",4092,18,1.724,TRUE,TRUE
+"CSJ Dialogue",0.03,"<=0.03s",4910,18,1.782,TRUE,TRUE
+"CSJ Dialogue",0.05,"<=0.05s",5556,18,1.789,TRUE,TRUE
+"CSJ Dialogue",0.1,"<=0.10s",8118,18,1.795,TRUE,TRUE
+"CSJ Dialogue",0.15,"<=0.15s",10435,18,1.626,TRUE,TRUE
+"CSJ Dialogue",NA,"all-vowels",24732,18,1.441,TRUE,FALSE

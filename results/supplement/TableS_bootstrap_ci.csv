@@ -1,0 +1,4 @@
+"corpus","DV","point_estimate","ci_lower_95","ci_upper_95","n_boot","seed","clears_1.0_stably","clears_1.5_stably"
+"CSJ Monologue","landmark_excursion",1.757,1.539,2.048,1000,2026,TRUE,TRUE
+"Buckeye","landmark_excursion",1.484,1.328,1.627,1000,2026,TRUE,FALSE
+"CSJ Dialogue","landmark_excursion",1.441,1.113,1.74,1000,2026,TRUE,FALSE

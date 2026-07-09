@@ -1,0 +1,4 @@
+Dataset,Total,Drop_Duration,Drop_Unvoiced,Drop_Sparse,Drop_Jump,Final_Kept
+Buckeye,357301,14555,43754,13695,11024,274273
+CSJ Dialogue,33145,1997,5118,863,433,24734
+CSJ Monologue,107854,4982,4621,2177,2918,93156
